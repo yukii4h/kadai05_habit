@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>習慣化アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>習慣を入力してください</h1>
+        <div class="input-group">
+            <input type="text" id="habitInput" placeholder="例）毎日本を読む" maxlength="30">
+            <p class="helper-text">※この習慣設定は1回限りです</p>
+        </div>
+        <button id="saveHabit" class="primary-button">はじめる</button>
+        <div id="message" class="message"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>習慣化アプリ - 記録</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tracking-container">
+        <div class="habit-header">
+            <h1>今日の習慣記録</h1>
+            <div id="weather" style="margin-top: 20px; font-size: 1.2rem; color: #555;">
+                天気情報を取得中...
+            </div>
+            <p class="habit-name">習慣: <span id="habitName"></span></p>
+        </div>
+
+        <div class="input-section">
+            <div class="time-input">
+                <label for="minutes">本日の実施時間</label>
+                <input type="number" id="minutes" placeholder="分単位で入力" min="1" max="1440">
+            </div>
+            <button id="submitTime" class="primary-button">記録する</button>
+            <div id="message" class="message"></div>
+        </div>
+
+        <div class="stats-section">
+            <div class="streak-info">
+                <p>継続日数: <span id="currentStreak">0</span>日</p>
+            </div>
+            <div class="chart-container">
+                <h2>週間記録</h2>
+                <canvas id="weeklyChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>月間記録</h2>
+                <canvas id="monthlyChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="chart-config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
